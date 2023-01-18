@@ -30,6 +30,7 @@ function openOriginalImage(event) {
 if (event.target.nodeName !== 'IMG') {
    return;
 }
+   event.preventDefault();
    event.target.src = event.target.dataset.source;
 
    const instance = basicLightbox.create(`<img src="${event.target.src}">`, {
